@@ -1,0 +1,48 @@
+@use '@/styles/_colors.module.scss' as c;
+
+.container {
+    display: flex;
+    position: relative;
+}
+
+.lessons,
+.band {
+    height: 50vh;
+    width: 100%;
+    opacity: 90%;
+    color: c.$white;
+
+    &:hover {
+        opacity: 85%;
+    }
+}
+
+.lessons {
+    background: c.$purple;
+
+
+}
+
+.instructors,
+.bandMember {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 40%;
+}
+
+.logoContainer {
+    z-index: 10;
+    background-color: c.$white;
+    border-radius: 80px;
+    border: 8px solid c.$black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.band {
+    background: c.$violet;
+
+}

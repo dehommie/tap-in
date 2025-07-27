@@ -1,0 +1,70 @@
+@use '@/styles/_colors.module.scss' as c;
+
+.wrapper {
+    display: flex;
+    overflow-x: scroll;
+    height: 100vh;
+    align-items: center;
+    // width: 100%;
+    // max-width: fit-content;
+    // position: relative;
+}
+
+.wrapper> :nth-child(odd) {
+    transform: rotate(10deg);
+}
+
+.wrapper> :nth-child(even) {
+    transform: rotate(-10deg);
+}
+
+.paper {
+    max-height: 40%;
+    margin: 100px;
+    height: 50%;
+    border-radius: 30px !important;
+    // // border: 2px solid blue;
+    padding: 50px;
+    // background-color: c.$purple !important;
+    box-shadow: 10 0 40px rgba(0, 0, 0, 0.5) !important;
+
+    // display: flex;
+    // overflow: visible;
+    position: relative;
+}
+
+.container {
+    min-width: 800px;
+    color: c.$white;
+    // // border: 2px solid green;
+
+    // background-color: c.$purple;
+
+}
+
+.data {
+    // font-size: 5rem;
+}
+
+.tapinLogo {
+    width: 25%;
+    height: auto;
+    position: relative;
+    top: 170px;
+    left: -90px;
+}
+
+.memberImage {
+    position: relative;
+    top: -75px;
+    left: 150px;
+    object-fit: contain;
+    // display: block;
+    width: 100%;
+    height: auto;
+    // transform:  scale(2.2);
+    /* shift + enlarge */
+}
+
+I would be honored if you could write a recommendation letter on my behalf. Having you as a mentor and guide in my software engineering career has and is truly an insightful and invaluable experience. I believe your perspective would offer valuable insight into my abilities and character.
+	+1 248-525-7158
