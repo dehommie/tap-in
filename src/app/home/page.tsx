@@ -8,11 +8,11 @@ import { MemberCardType, memberInfo } from "@/components/mockData/memberInfo";
 export default function Home() {
   return (
     <Box>
-    <Landing/>
-    {/* <Box > */}
-          <MemberCard />
-  {/* </Box> */}
- 
+      <Landing />
+      {/* <Box > */}
+      <MemberCard />
+      {/* </Box> */}
+
     </Box>
   );
 }
