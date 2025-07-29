@@ -1,0 +1,6 @@
+@use '@/styles/_colors.module.scss' as c;
+
+.container {
+    background-color: c.$violet ;
+    height:100vh ;
+}
