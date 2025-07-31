@@ -1,8 +1,11 @@
 'use client'
 import { createClient } from "@/utils/supabase/supabase-client"
-import { Box, Button, FormControl, TextField, Typography } from "@mui/material"
+import { Box, Button, FormControl, InputAdornment, TextField, Typography } from "@mui/material"
 import { useState } from "react"
 import styles from './authentication.module.scss'
+import EmailIcon from '@mui/icons-material/Email';
+import LockIcon from '@mui/icons-material/Lock';
+import PersonIcon from '@mui/icons-material/Person';
 
 interface AuthProps {
     variant?: 'sign-up' | 'log-in'
@@ -67,9 +70,34 @@ const Authentication = ({ variant }: AuthProps) => {
                     to TAP IN</Typography>
             </Box>
             <FormControl>
-                {variant === 'sign-up' && <TextField placeholder="Full Name" name='name' value={formData.name} onChange={handleChange} />}
-                <TextField placeholder="email" name='email' value={formData.email} onChange={handleChange} />
-                <TextField placeholder="password" name='password' type="password" value={formData.password} onChange={handleChange} />
+                {variant === 'sign-up' && <TextField slotProps={{
+                    input: {
+                        startAdornment: (
+                            <InputAdornment position="start">
+                                <PersonIcon />
+                            </InputAdornment>
+                        ),
+                    },
+                }} variant={'standard'} placeholder="Full Name" name='name' value={formData.name} onChange={handleChange} />}
+                <TextField variant={'standard'} slotProps={{
+                    input: {
+                        startAdornment: (
+                            <InputAdornment position="start">
+                                <EmailIcon />
+                            </InputAdornment>
+                        ),
+                    },
+                }}
+                    placeholder="email" name='email' value={formData.email} onChange={handleChange} />
+                <TextField variant={'standard'} slotProps={{
+                    input: {
+                        startAdornment: (
+                            <InputAdornment position="start">
+                                <LockIcon />
+                            </InputAdornment>
+                        ),
+                    },
+                }} placeholder="password" name='password' type="password" value={formData.password} onChange={handleChange} />
                 <Button type="submit" onClick={variant === 'log-in' ? handleLogin : handleSignUp}>
                     {variant === 'log-in' ?
                         <Typography> Log In </Typography>
