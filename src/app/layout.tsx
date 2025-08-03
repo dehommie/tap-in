@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Nav from "@/components/nav/nav";
-import { createClient } from "@/utils/supabase/supabase-server";
 
 
 export const metadata: Metadata = {
@@ -15,9 +14,6 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
 
-  // const supabase = createClient()
-
-  // const {error, data : {user}} = await (await supabase).auth.getUser()
 
   return (
     <html lang="en">

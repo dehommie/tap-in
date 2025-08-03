@@ -1,9 +1,10 @@
+'use client'
 import { Box, Icon, Paper, Typography } from "@mui/material"
 import styles from './member-card.module.scss'
-import UnoptimizedImage from "@/utils/unoptimized-image/unoptimized-image"
 import PlaceIcon from '@mui/icons-material/Place';
 import { MemberCardType, memberInfo } from "@/components/mockData/memberInfo";
 import colors from '@/styles/_colors.module.scss'
+import UnoptimizedImage from "@/utils/unoptimized-image/unoptimized-image";
 interface MemberCardProps {
     member?: MemberCardType
 }
@@ -13,7 +14,7 @@ const MemberCard = ({ member }: MemberCardProps) => {
     return (
         <Box className={styles.wrapper}>
             {memberInfo.map((member: MemberCardType, index) =>
-                <Paper className={styles.paper} elevation={3} style={{
+                <Paper className={styles.paper} key={index} elevation={3} style={{
                     backgroundColor: colors[index], // 🎨 different color for each
                 }}>
                     <Box key={index} className={styles.container}>

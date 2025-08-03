@@ -1,5 +1,4 @@
 'use client'
-
 import Authentication from "@/components/authentication/authentication"
 import { Box, Button, Typography } from "@mui/material"
 import styles from './login.module.scss'

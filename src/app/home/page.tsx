@@ -1,18 +1,18 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import styles from "./page.module.scss";
 import { Box } from "@mui/material";
-import Landing from "@/components/landing/landing";
-import MemberCard from "@/components/member-card/member-card";
-import { MemberCardType, memberInfo } from "@/components/mockData/memberInfo";
 
-export default function Home() {
+import Layout from "@/components/layout/layo";
+import { createClient } from "../utils/supabase/supabase-server";
+
+
+export default async function Home() {
+      const supabase =  await createClient()
+  
+    const { error, data: { user } } = await supabase.auth.getUser()
+
   return (
-    <Box>
-      <Landing />
-      {/* <Box > */}
-      <MemberCard />
-      {/* </Box> */}
-
+    <Box className={styles.container}>
+      <Layout />
     </Box>
   );
 }
